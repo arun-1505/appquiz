@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Quiz App</title>
+  <link rel="stylesheet" href="quizapp.css">
+  
+</head>
+<body>
+  <div class="quiz-container">
+    <!-- Quiz Header -->
+    <div class="quiz-header">
+      <h1 class="quiz-title">JavaScript Quiz</h1>
+      <p class="quiz-subtitle">Test your JavaScript knowledge</p>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+
+    <!-- Start Screen -->
+    <div class="start-screen" id="startScreen">
+      <h2 class="start-title">Ready to Test Your Skills?</h2>
+      <p class="start-description">
+        Challenge yourself with our comprehensive JavaScript quiz. 
+        Answer questions about syntax, concepts, and best practices.
+      </p>
+      <div class="quiz-info">
+        <div class="info-item">
+          <span class="info-label">Total Questions:</span>
+          <span class="info-value" id="totalQuestions">10</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Time Limit:</span>
+          <span class="info-value">No time limit</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Difficulty:</span>
+          <span class="info-value">Mixed</span>
+        </div>
+      </div>
+      <button class="btn" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Content -->
+    <div class="quiz-content hidden" id="quizContent">
+      <div class="question-counter" id="questionCounter">
+        Question 1 of 10
+      </div>
+      
+      <div class="question" id="question">
+        Loading question...
+      </div>
+      
+      <div class="answers" id="answers">
+        <!-- Answers will be dynamically loaded here -->
+      </div>
+      
+      <div class="feedback" id="feedback">
+        <!-- Feedback will appear here -->
+      </div>
+    </div>
+
+    <!-- Quiz Controls -->
+    <div class="quiz-controls hidden" id="quizControls">
+      <button class="btn" id="nextBtn" onclick="nextQuestion()" disabled>
+        Next Question
+      </button>
+    </div>
+
+    <!-- Results Screen -->
+    <div class="results hidden" id="results">
+      <div class="score-circle" id="scoreCircle">
+        0/10
+      </div>
+      <div class="score-text" id="scoreText">
+        Your Score: 0 out of 10
+      </div>
+      <div class="performance-message" id="performanceMessage">
+        <!-- Performance message will appear here -->
+      </div>
+      <button class="btn" onclick="restartQuiz()">Take Quiz Again</button>
+    </div>
+  </div>
+
+  <script src="quizapp.js"></script>
+</body>
+</html>
